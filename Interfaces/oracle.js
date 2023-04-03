@@ -17,7 +17,9 @@ async function run() {
     });
 
     //execute the following query and log the result in the console.
+  
     const result = await connection.execute(
+      //run node oracle.js in terminal to run command in database
       `SELECT sysdate from dual`,  //get the current time from the DB
     );
     console.log(result.rows);
