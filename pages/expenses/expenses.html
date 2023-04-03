@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Expenses</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Expenses</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="script" href="">
+  </head>
 
-<div class="">
- <h1>Expenses</h1>
- </div>
+  <body>
+    <div class="">
+      <h1>Expenses</h1>
+    </div>
 
-<p>Amount:
- <input type = "text">
- </p>
- 
+    <label for="">Amount: </label>
+    <input type="text" id="amount" name="amount">
+    <br>
 
- <p>Place of Purchase:
- <input type = "text">
- </p>
+    <label for="date">Date of delivery:</label>
+    <input type="date" name="Date" id="date">
+    <br>
 
-<label for="cars">Choose a Category:</label>
+    <label>Place of Purchase: </label>
+    <input type="text" id="place" name="place">
+    <br>
 
- <select name="Category" id="category">
-  <option value="Advertising">Advertising</option>
-  <option value="Cell">Cell</option>
-  <option value="Consulting Services">Consulting Services</option>
-  <option value="Donations">Donations</option>
-  <option value="Feed">Feed</option>
-  <option value="Financial Planning">Financial Planning</option>
-  <option value="Gifts">Gifts</option>
-  <option value="Internet">Internet</option>
-  <option value="Machinery">Machinery</option>
-  <option value="Meals">Meals</option>
-  <option value="Supplies">Supplies</option>
-</select>
+    <label for="category">Choose a Category:</label>
+    <select name="category" id="category">
+      <option value="Advertising">Advertising</option>
+      <option value="Cell">Cell</option>
+      <option value="Consulting Services">Consulting Services</option>
+      <option value="Donations">Donations</option>
+      <option value="Feed">Feed</option>
+      <option value="Financial Planning">Financial Planning</option>
+      <option value="Gifts">Gifts</option>
+      <option value="Internet">Internet</option>
+      <option value="Machinery">Machinery</option>
+      <option value="Meals">Meals</option>
+      <option value="Supplies">Supplies</option>
+    </select>
+    <br>
 
-<br>
+    <input type="submit" value="Submit" id="submit-button">
 
-<input type = "submit" value = "Submit">
+    <script>
+      // Get references to the form elements and output div
+      const amount = document.getElementById('amount');
+      const date = document.getElementById('date');
+      const place = document.getElementById('place');
+      const category = document.getElementById('category');
+      var count = 0;
 
-</body>
+      // Listen for the form submission event
+      document.getElementById('submit-button').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Get the values of the form elements
+        const amount = amount.value;
+        const date = date.value;
+        const place = place.value;
+        const category = category.value;
+        count += 1;
+
+        // Build the output string
+        const outputString = `Amount: ${amount}, Date: ${date}, Place: ${place}, Category: ${category}`;
+
+        //log the data to the console
+        console.log(`New Entry ${count}: [${outputString}]`)
+      });
+    </script>
+  </body>
 </html>

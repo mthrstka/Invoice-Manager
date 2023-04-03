@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Delivery</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Delivery</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="script" href="">
+  </head>
+  <body>
+    <div class="">
+      <h1>Deliveries</h1>
+    </div>
 
-<div class="">
- <h1>Deliveries</h1>
- </div>
+    <label for="farm">Choose a Farm:</label>
+    <select name="Farm" id="farm">
+      <option value="Wisco">Wisco</option>
+      <option value="Heeg">Heeg</option>
+      <option value="Brandner">Brandner</option>
+      <option value="Bergert">Bergert</option>
+      <option value="Marti">Marti</option>
+    </select>
+    <br>
 
-<label for="cars">Choose a Farm:</label>
+    <label for="date">Date of delivery:</label>
+    <input type="date" name="Date" id="date" required>
+    <br>
 
-<select name="Farm" id="farm">
-  <option value="Wisco">Wisco</option>
-  <option value="Heeg">Heeg</option>
-  <option value="Brandner">Brandner</option>
-  <option value="Bergert">Bergert</option>
-  <option value="Marti">Marti</option>
-</select>
+    <input type="submit" value="Submit" id="submit-button">
+    <script>
+      // Get references to the form elements and output div
+      const farmInput = document.getElementById('farm');
+      const dateInput = document.getElementById('date');
+      var count = 0;
 
-<br>
+      // Listen for the form submission event
+      document.getElementById('submit-button').addEventListener('click', function (event) {
+        event.preventDefault();
 
-<input type = "submit" value = "Submit">
+        // Get the values of the form elements
+        const farm = farmInput.value;
+        const date = dateInput.value;
+        count += 1;
 
-</body>
+        // Build the output string
+        const outputString = `Farm: ${farm}, Date: ${date}`;
+
+        //log the data to the console
+        console.log(`New Entry ${count}: [${outputString}]`)
+      });
+    </script>
+  </body>
 </html>
