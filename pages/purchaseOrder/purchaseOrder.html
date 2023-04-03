@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Purchase Order</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
-<body>
+  <head>
+  <meta charset="UTF-8">
+  <title>Purchase Order</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <div class="">
+      <h1>Purchase Orders</h1>
+    </div>
 
-<div class="">
- <h1>Purchase Orders</h1>
- </div>
+    <label for="amount">Amount: </label>
+    <input type="number" id="amount" name="amount">
+    <br>    
 
-<p>
-Amount:
- <input type = "number">
-</p>
+    <label for="from">Coming From:</label>
+    <select name="from" id="from">
+      <option value="VTM">VTM</option>
+      <option value="Magnum">Magnum</option>
+    </select>
+    <br>
 
-<label for="from">Coming From:</label>
+    <label for="to">Going To:</label>
+    <select name="to" id="to">
+      <option value="NSE">NSE</option>
+      <option value="Wisco">Wisco</option>
+      <option value="Provision">Provision</option>
+      <option value="RC">RC</option>
+    </select>
+    <br>
 
-<select name="from" id="from">
-  <option value="VTM">VTM</option>
-  <option value="Magnum">Magnum</option>
-</select>
+    <input type="submit" value="Submit" id="submit-button">
+    <br>
 
-<br>
+    <!-- Pre-deployment: Display an output of the inputs submitted below the form -->
+    <!-- For deployment: Display the ouput of the inputs submitted to the console or a log file, only display to user if there is an exception sending it to the DB. -->
+    <div id="output"></div>
+    <script>
+      // Get references to the form elements and output div
+      const amountInput = document.getElementById('amount');
+      const fromInput = document.getElementById('from');
+      const toInput = document.getElementById('to');
+      // const outputDiv = document.getElementById('output');
+      var count = 0;
 
-<label for="to">Going To:</label>
+      // Listen for the form submission event
+      document.getElementById('submit-button').addEventListener('click', function (event) {
+        event.preventDefault();
 
-<select name="to" id="to">
-  <option value="NSE">NSE</option>
-  <option value="Wisco">Wisco</option>
-  <option value="Provision">Provision</option>
-  <option value="RC">RC</option>
-</select>
+        // Get the values of the form elements
+        const amount = amountInput.value;
+        const from = fromInput.value;
+        const to = toInput.value;
+        count += 1;
 
-<br>
+        // Build the output string
+        const outputString = `Amount: ${amount}, Coming From: ${from}, Going To: ${to}`;
 
-<input type = "submit" value = "Submit">
+        // Display the output string in the output div
+        // outputDiv.innerHTML += `<div>New Entry ${count}: [${outputString}]</div>`;
 
-
-</body>
+        //log the data to the console
+        console.log(`New Entry ${count}: [${outputString}]`)
+      });
+    </script>
+  </body>
 </html>
