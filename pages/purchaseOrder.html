@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Purchase Order</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <div class="">
@@ -12,26 +12,27 @@
     </div>
 
     <label for="amount">Amount: </label>
-    <input type="number" id="amount" name="amount">
+    <input type="number" class = "txt" id="amount" name="amount">
     <br>    
 
     <label for="from">Coming From:</label>
-    <select name="from" id="from">
+    <select name="from" class = "txt" id="from">
       <option value="VTM">VTM</option>
       <option value="Magnum">Magnum</option>
     </select>
     <br>
 
     <label for="to">Going To:</label>
-    <select name="to" id="to">
+    <select name="to" class = "txt" id="to">
       <option value="NSE">NSE</option>
       <option value="Wisco">Wisco</option>
       <option value="Provision">Provision</option>
       <option value="RC">RC</option>
     </select>
     <br>
+    <br>
 
-    <input type="submit" value="Submit" id="submit-button">
+    <input type="submit" class = "submit" value="Submit" id="submit-button">
     <br>
 
     <!-- Pre-deployment: Display an output of the inputs submitted below the form -->

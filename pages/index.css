@@ -1,0 +1,40 @@
+* {
+text-align: center;
+background-color: rgb(220, 214, 214);
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1{
+font-size: 60px;
+}
+h6{
+    font: 40px;
+}
+
+/*btn is for buttons on home page */
+.btn{
+    height:50px;
+    width:170px;
+    border-radius: 1%;
+    font-size:  20px;
+    transition-duration: 0.4s;
+    background-color: rgb(177, 169, 169);
+}
+.btn:hover {
+    background-color: #8538c1; /* Green */
+    color: rgb(255, 255, 255);
+}
+
+
+/*for all submit buttons */
+.submit{
+    height:30px;
+    width: 100px;
+    background-color: rgb(177, 169, 169);
+}
+
+/*For all other input fields (text boxes, date selection, dropdowns */ 
+.txt{
+    background-color:  white;
+}
+
