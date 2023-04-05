@@ -45,10 +45,10 @@
 
     <script>
       // Get references to the form elements and output div
-      const amount = document.getElementById('amount');
-      const date = document.getElementById('date');
-      const place = document.getElementById('place');
-      const category = document.getElementById('category');
+      const amountInput = document.getElementById('amount');
+      const dateInput = document.getElementById('date');
+      const placeInput = document.getElementById('place');
+      const categoryInput = document.getElementById('category');
       var count = 0;
 
       // Listen for the form submission event
@@ -56,17 +56,17 @@
         event.preventDefault();
 
         // Get the values of the form elements
-        const amount = amount.value;
-        const date = date.value;
-        const place = place.value;
-        const category = category.value;
+        const amount = amountInput.value;
+        const date = dateInput.value;
+        const place = placeInput.value;
+        const category = categoryInput.value;
         count += 1;
 
         // Build the output string
         const outputString = `Amount: ${amount}, Date: ${date}, Place: ${place}, Category: ${category}`;
 
         //log the data to the console
-        console.log(`New Entry ${count}: [${outputString}]`)
+        console.log(`New Entry ${count}: [${outputString}]`);
       });
     </script>
   </body>
