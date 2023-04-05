@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Delivery</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../../index.css">
     <link rel="script" href="">
   </head>
   <body>
@@ -13,7 +13,7 @@
     </div>
 
     <label for="farm">Choose a Farm:</label>
-    <select name="Farm" id="farm">
+    <select name="Farm" class = "txt" id="farm">
       <option value="Wisco">Wisco</option>
       <option value="Heeg">Heeg</option>
       <option value="Brandner">Brandner</option>
@@ -23,10 +23,10 @@
     <br>
 
     <label for="date">Date of delivery:</label>
-    <input type="date" name="Date" id="date" required>
+    <input type="date" class = "txt" name="Date" id="date" required>
     <br>
-
-    <input type="submit" value="Submit" id="submit-button">
+    <br>
+    <input type="submit" class = "submit" value="Submit" id="submit-button">
     <script>
       // Get references to the form elements and output div
       const farmInput = document.getElementById('farm');
