@@ -3,6 +3,6 @@
     "datatables.net-dt": "^1.13.4",
     "node": "^19.8.1",
     "node-oracledb": "^1.0.2",
-    "oracledb": "^5.5.0"
+    "oracledb": "^5.2.0"
   }
 }
