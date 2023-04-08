@@ -1,74 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <title>Expenses</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../../index.css">
-    <link rel="script" href="">
   </head>
 
   <body>
-    <div class="">
+    <div class="title">
       <h1>Expenses</h1>
     </div>
 
-    <label for="">Amount: </label>
-    <input type="text" class = "txt" id="amount" name="amount">
+    <!-- 'group' class places the content into the box
+         'grid' aligns the labels and inputs
+         these must be separate to work correctly -->
+    <div class="group"> 
+      <div class="grid">
+        <label>Amount </label>
+        <input type="text" class = "txt" id="amount" name="amount">
+      
+
+        <label for="date">Date of Delivery</label>
+        <input type="date" class = "txt" name="Date" id="date">
+      
+
+        <label>Place of Purchase </label>
+        <input type="text" class = "txt" id="place" name="place">
+      
+
+        <label for="category">Choose a Category</label>
+        <select name="category" class = "txt" id="category">
+          <option value="Advertising">Advertising</option>
+          <option value="Cell">Cell</option>
+          <option value="Consulting Services">Consulting Services</option>
+          <option value="Donations">Donations</option>
+          <option value="Feed">Feed</option>
+          <option value="Financial Planning">Financial Planning</option>
+          <option value="Gifts">Gifts</option>
+          <option value="Internet">Internet</option>
+          <option value="Machinery">Machinery</option>
+          <option value="Meals">Meals</option>
+          <option value="Supplies">Supplies</option>
+        </select>
+      </div>
+    </div>
     <br>
-
-    <label for="date">Date of delivery:</label>
-    <input type="date" class = "txt" name="Date" id="date">
     <br>
-
-    <label>Place of Purchase: </label>
-    <input type="text" class = "txt" id="place" name="place">
-    <br>
-
-    <label for="category">Choose a Category:</label>
-    <select name="category" class = "txt" id="category">
-      <option value="Advertising">Advertising</option>
-      <option value="Cell">Cell</option>
-      <option value="Consulting Services">Consulting Services</option>
-      <option value="Donations">Donations</option>
-      <option value="Feed">Feed</option>
-      <option value="Financial Planning">Financial Planning</option>
-      <option value="Gifts">Gifts</option>
-      <option value="Internet">Internet</option>
-      <option value="Machinery">Machinery</option>
-      <option value="Meals">Meals</option>
-      <option value="Supplies">Supplies</option>
-    </select>
-    <br>
-    <br>
-
-    <input type="submit" class = "submit" value="Submit" id="submit-button">
-
-    <script>
-      // Get references to the form elements and output div
-      const amountInput = document.getElementById('amount');
-      const dateInput = document.getElementById('date');
-      const placeInput = document.getElementById('place');
-      const categoryInput = document.getElementById('category');
-      var count = 0;
-
-      // Listen for the form submission event
-      document.getElementById('submit-button').addEventListener('click', function (event) {
-        event.preventDefault();
-
-        // Get the values of the form elements
-        const amount = amountInput.value;
-        const date = dateInput.value;
-        const place = placeInput.value;
-        const category = categoryInput.value;
-        count += 1;
-
-        // Build the output string
-        const outputString = `Amount: ${amount}, Date: ${date}, Place: ${place}, Category: ${category}`;
-
-        //log the data to the console
-        console.log(`New Entry ${count}: [${outputString}]`);
-      });
-    </script>
+    <input type="submit" class="submit" value="Submit" id="submit-button">
   </body>
 </html>
+
+<!-- Load HTML content, then JS  -->
+<script src="expenses.js"> </script>
