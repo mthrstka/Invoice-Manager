@@ -1,12 +1,16 @@
-* {
-text-align: center;
-background-color: rgb(220, 214, 214);
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+* { /*all tags*/
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+}
+
+html {
+    background-color: rgb(220, 214, 214);
 }
 
 h1{
-font-size: 60px;
+    font-size: 60px;
 }
+
 h6{
     font: 40px;
 }
@@ -14,27 +18,83 @@ h6{
 /*btn is for buttons on home page */
 .btn{
     height:50px;
-    width:170px;
-    border-radius: 1%;
+    width:200px;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    cursor: pointer; /*make the cursor turn to a hand when hovering*/
+    padding: 10px 20px;
     font-size:  20px;
     transition-duration: 0.4s;
     background-color: rgb(177, 169, 169);
 }
-.btn:hover {
-    background-color: #8538c1; /* Green */
+
+.btn:hover { /*change color on mouseover*/
+    background-color: #565556; /*dark gray */
+    border-color: black;
     color: rgb(255, 255, 255);
+} 
+
+/*for grouping items together in a box*/
+.group {
+    border-style: solid;
+    border-color: #565556;
+    background-color: #6EB5FF;
+    display: inline-block; /*makes div adhere to content width*/
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px
 }
 
+/* for all page titles */
+.title{
+
+}
 
 /*for all submit buttons */
 .submit{
     height:30px;
     width: 100px;
+    border-radius: 1px;
+    text-align: center;
     background-color: rgb(177, 169, 169);
+    border-style: solid;
+    border-color: black
 }
 
-/*For all other input fields (text boxes, date selection, dropdowns */ 
+.submit:hover { /*change color on mouseover*/
+    background-color: #565556; /*dark gray */
+    border-color: black;
+    color: rgb(255, 255, 255);
+}
+
+/* aligns the labels and inputs regardless of mismatched length
+https://stackoverflow.com/questions/9686538/align-labels-in-form-next-to-input
+ answer from David Rutherford
+ */
+
+div.grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 5px;
+}
+
+div.grid label {
+    text-align: right;
+}
+
+div.grid label:after {
+    content: ":"; /*adds a semicolon after label text*/
+}
+
+/*for all other input fields (text boxes, date selection, dropdowns */ 
 .txt{
     background-color:  white;
+    text-align: left;
+    border-radius: 1px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
 }
 
