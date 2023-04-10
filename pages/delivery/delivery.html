@@ -1,53 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <title>Delivery</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../../index.css">
-    <link rel="script" href="">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
+
+  <header>
+    <button class="homeButton" onclick="window.location.href='../../index.html'"><i class="fa fa-home"></i></button>
+  </header>
+
   <body>
-    <div class="">
+    <div class="title">
       <h1>Deliveries</h1>
     </div>
 
-    <label for="farm">Choose a Farm:</label>
-    <select name="Farm" class = "txt" id="farm">
-      <option value="Wisco">Wisco</option>
-      <option value="Heeg">Heeg</option>
-      <option value="Brandner">Brandner</option>
-      <option value="Bergert">Bergert</option>
-      <option value="Marti">Marti</option>
-    </select>
-    <br>
+    <div class="group">
+      <div class="grid">
+        <label for="farm">Select Farm</label>
+        <select name="Farm" class = "txt" id="farm">
+          <option value="Wisco">Wisco</option>
+          <option value="Heeg">Heeg</option>
+          <option value="Brandner">Brandner</option>
+          <option value="Bergert">Bergert</option>
+          <option value="Marti">Marti</option>
+        </select>
 
-    <label for="date">Date of delivery:</label>
-    <input type="date" class = "txt" name="Date" id="date" required>
+        <label for="date">Date of Delivery</label>
+        <input type="date" class = "txt" name="Date" id="date" required>
+      </div>
+    </div>
     <br>
     <br>
     <input type="submit" class = "submit" value="Submit" id="submit-button">
-    <script>
-      // Get references to the form elements and output div
-      const farmInput = document.getElementById('farm');
-      const dateInput = document.getElementById('date');
-      var count = 0;
-
-      // Listen for the form submission event
-      document.getElementById('submit-button').addEventListener('click', function (event) {
-        event.preventDefault();
-
-        // Get the values of the form elements
-        const farm = farmInput.value;
-        const date = dateInput.value;
-        count += 1;
-
-        // Build the output string
-        const outputString = `Farm: ${farm}, Date: ${date}`;
-
-        //log the data to the console
-        console.log(`New Entry ${count}: [${outputString}]`)
-      });
-    </script>
   </body>
 </html>
+
+<!-- Load HTML content, then JS  -->
+<script src="delivery.js"> </script>
