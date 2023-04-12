@@ -1,7 +1,3 @@
-
-
-
-
 function getInput() {
   const customer = document.getElementById("select").value;
   const description = document.getElementById("descr").value;
