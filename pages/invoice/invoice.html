@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../index.css">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
 
   <header>
@@ -24,7 +25,7 @@
       <div class="grid">
 
         <label>Customer</label>
-        <select class="txt">
+        <select id="select" class="txt">
           <option value="">op1</option>
           <option value="">op2</option>
           <option value="">op3</option>
@@ -33,20 +34,20 @@
         </select>
 
         <label>Description</label>
-        <input type="text" class = "txt">
+        <input type="text" class = "txt" id="descr">
         <label>Quantity</label>
-        <input type ="number" class = "txt">
+        <input type ="number" class = "txt" id="qty">
         <label>Price</label>
-        <input type = "number" class = "txt">
+        <input type = "number" class = "txt" id="price">
         <label>Customer Message</label>
-        <input type = "text" class = "txt">
+        <input type = "text" class = "txt" id="msg">
 
 
       </div>
     </div>
     <br>
     <br>
-    <input type="submit" class = "submit" value="Generate Invoice" id="submit-button">
+    <input type="submit" class = "submit" value="Generate Invoice" id="submit-button" onclick="getInput()">
     <br>
     <br>
     <input type="button" class = "addCust" value="Add Customer"  onclick="window.location.href='../addcust/addcust.html'">
@@ -54,4 +55,4 @@
 </html>
 
 <!-- Load HTML content, then JS  -->
-<script src="delivery.js"> </script>
+  <script src="../invoice/pdfkit.js"></script>
