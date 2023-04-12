@@ -45,6 +45,9 @@ h6{
     padding-bottom: 25px;
     padding-left: 50px;
     padding-right: 50px
+
+    
+    
 }
 
 .homeButton{
@@ -104,6 +107,7 @@ div.grid {
     display: grid;
     grid-template-columns: max-content max-content;
     grid-gap: 5px;
+    
 }
 
 div.grid label {
