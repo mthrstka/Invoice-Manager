@@ -69,10 +69,19 @@ h6{
 
 }
 
+.addCust{
+    height:30px;
+    width: 100px;
+    border-radius: 1px;
+    text-align: center;
+    background-color: rgb(177, 169, 169);
+    border-style: solid;
+    border-color: black
+}
 /*for all submit buttons */
 .submit{
     height:30px;
-    width: 100px;
+    width: 150px;
     border-radius: 1px;
     text-align: center;
     background-color: rgb(177, 169, 169);
