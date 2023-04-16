@@ -1,5 +1,15 @@
+let invoiceNumber = 1;
+
+function getInvoiceNo(){
+return {invoiceNumber}
+}
+
 function generatePDF() {
   const doc = new jsPDF();
+
+  var img = new Image()
+  img.src = 'dog.png'
+  doc.addImage(img, 'png', 10, 78, 12, 15)
   
   // Add company information
   doc.setFontSize(14);
@@ -16,7 +26,7 @@ function generatePDF() {
   doc.setFontType("bold");
   doc.text("Invoice", 10, 70);
   doc.setFontType("normal");
-  doc.text("Invoice #12345", 10, 78);
+  doc.text("Invoice #" + invoiceNumber, 10, 78);
   doc.text("Invoice Date: " + new Date().toLocaleDateString(), 10, 86);
   
   // Add table header
@@ -61,8 +71,13 @@ function generatePDF() {
   doc.text("Total:", 120, y);
   doc.text("$" + grandTotal.toFixed(2), 160, y);
     const message = getInput().message;
-  doc.text("Message" + message);
+    y+= 50;
+    doc.setFontType("normal");
+  doc.text("Message" + message, 10, y);
   
+  invoiceNumber++;
+  console.log(invoiceNumber);
+
   // Save the PDF
   doc.save("invoice.pdf");
 }
