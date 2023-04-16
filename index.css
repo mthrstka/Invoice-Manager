@@ -3,8 +3,13 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
 }
 
-html {
+html body {
     background-color: rgb(220, 214, 214);
+}
+
+div {
+    text-align: center;
+    justify-content: center;
 }
 
 h1{
@@ -15,8 +20,12 @@ h6{
     font: 40px;
 }
 
+.flex {
+    display: flex;
+}
+
 /*btn is for buttons on home page */
-.btn{
+.btn {
     height:50px;
     width:200px;
     border-radius: 10px;
@@ -41,13 +50,11 @@ h6{
     border-color: #565556;
     background-color: #60519c;
     display: inline-block; /*makes div adhere to content width*/
+    width: 40%;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 50px;
     padding-right: 50px
-
-    
-    
 }
 
 .homeButton{
@@ -68,9 +75,9 @@ h6{
 }
 
 /* for all page titles */
-.title{
+/* .title{
 
-}
+} */
 
 .addCust{
     height:30px;
