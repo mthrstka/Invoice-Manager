@@ -1,6 +1,7 @@
 let invoiceNumber = 1;
 
 function getInvoiceNo(){
+document.getElementById("invoice_no").innerHTML = invoiceNumber;
 return {invoiceNumber}
 }
 

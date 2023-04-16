@@ -4,8 +4,10 @@
 }
 
 html body {
-    background-color: rgb(220, 214, 214);
+        background-color: rgb(255, 255, 255);
+
 }
+
 
 div {
     text-align: center;
