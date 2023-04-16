@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "datatables.net-dt": "^1.13.4",
+    "jspdf": "^2.5.1",
+    "jspdf-invoice-template": "^1.4.3",
     "node": "^19.8.1",
     "node-oracledb": "^1.0.2",
     "oracledb": "^5.2.0",
