@@ -7,9 +7,6 @@ return {invoiceNumber}
 function generatePDF() {
   const doc = new jsPDF();
 
-  var img = new Image()
-  img.src = 'dog.png'
-  doc.addImage(img, 'png', 10, 78, 12, 15)
   
   // Add company information
   doc.setFontSize(14);
