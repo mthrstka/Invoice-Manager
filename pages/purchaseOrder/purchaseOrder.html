@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   
   <head>
@@ -7,8 +6,10 @@
     <title>Purchase Order</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../../index.css">
+    <link rel="icon" href="../../Assests\logo.ico" type="image/icon type">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="purchaseOrder.js"></script>
   </head>
 
   <header>
@@ -44,6 +45,7 @@
     <br>
 
     <input type="submit" class = "submit" value="Submit" id="submit-button">
+    <input type="submit" class = "submit" value="Generate CSV" id="csv-button" onclick="generateCSV()"> 
     <br>
 
     <!-- Pre-deployment: Display an output of the inputs submitted below the form -->
