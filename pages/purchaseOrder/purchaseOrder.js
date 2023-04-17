@@ -47,7 +47,7 @@ function generateCSV() {
   // Create a temporary HTML link element to download the CSV file
   const link = document.createElement('a'); //creates link element
   link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvString)); //adds a data to the file through the href
-  link.setAttribute('download', 'data.csv'); //adds download to link
+  link.setAttribute('download', 'purchase-order.csv'); //adds download to link
   link.style.display = 'none'; //hide link
   document.body.appendChild(link); //add link to the page
 
