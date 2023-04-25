@@ -5,7 +5,7 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="../../pages.css">
+        <link rel="stylesheet" href="../../index.css">
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -17,9 +17,16 @@
         </script>
     </head>
 
-    <header>
-        <button class="homeButton" onclick="window.location.href='../../index.html'"><i class="fa fa-home"></i></button>
-    </header>
+    <script type="module" src="consulting.js"></script>
+
+    <div class="topbar">
+        <a class="homeButton" href='../../index.html'><i class="fa fa-home"></i></a>
+        <a href="../expenses/expenses.html">Expenses</a>
+        <a href="../delivery/delivery.html">Deliveries</a>
+        <a href="../consulting/consulting.html">Consulting</a>
+        <a href="../invoice/invoice.html">Invoices</a>
+        <a href="../purchaseOrder/purchaseOrder.html">Purchase Order</a>
+      </div>
     
     <body>
         <div class="title">

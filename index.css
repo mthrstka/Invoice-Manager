@@ -15,11 +15,11 @@ div {
 }
 
 h1{
-    font-size: 60px;
+    font-size: 3rem;
 }
 
 h6{
-    font: 40px;
+    font: 2rem;
 }
 
 .flex {
@@ -46,59 +46,80 @@ h6{
     color: rgb(255, 255, 255);
 } 
 
+.navBtn {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /*for grouping items together in a box*/
 .group {
     border-style: solid;
     border-color: #565556;
     background-color: #60519c;
     display: inline-block; /*makes div adhere to content width*/
-    width: 40%;
+    min-width: 40%;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 50px;
     padding-right: 50px
 }
 
-.homeButton{
-    position: fixed;
-    left: 3px;
-    top: 3px;
-    background-color:  #60519c;
+.topbar {
+    overflow: hidden;
+    background-color: #60519c;
     border-radius: 10px;
-    border:none;
-    color: white;
-    padding: 6px 8px;
-    font-size: 24px;
+  }
+  
+.topbar a {
+    float: left;
+    color: #f2f2f2;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1rem;
     cursor: pointer;
 }
+  
+.topbar a:hover {
+    background-color: #7663be;
+}
+  
+.topbar a.active {
+    background-color: #04AA6D;
+    color: white;
+    text-decoration: none;
+}
 
-.homeButton:hover {
-    background-color: #60519c;
+.topbar img{
+    height: 3rem;
+}
+
+.homeButton{
+    font-size: 2rem;
 }
 
 /* for all page titles */
-/* .title{
-
-} */
 
 .addCust{
     height:30px;
-    width: 100px;
+    min-width: 100px;
     border-radius: 1px;
     text-align: center;
     background-color: rgb(177, 169, 169);
     border-style: solid;
-    border-color: black
+    border-color: black;
+    font-size: 1rem;
 }
 /*for all submit buttons */
 .submit{
     height:30px;
-    width: 150px;
+    min-width: 150px;
     border-radius: 1px;
     text-align: center;
     background-color: rgb(177, 169, 169);
     border-style: solid;
-    border-color: black
+    border-color: black;
+    font-size: 1rem;
 }
 
 .submit:hover { /*change color on mouseover*/
@@ -135,5 +156,30 @@ div.grid label:after {
     border-color: black;
     border-style: solid;
     border-width: 2px;
+    font-size: 1rem;
 }
 
+.navbar {
+    text-align:center;
+    border: solid #565555 3px;
+    margin: 1.75rem;
+    padding: 1.75rem 0;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #57488d;
+}
+
+.navbar a {
+    padding: 1.5rem .5rem;
+    background-color: #60519c;
+    margin-inline: .20vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 1.5rem;
+}
+
+.navbar a:hover {
+    box-shadow: black 0 0 10px 2px;
+    background-color: #7663be;
+}
