@@ -148,6 +148,11 @@ div.grid label:after {
     content: ":"; /*adds a semicolon after label text*/
 }
 
+div.title h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 /*for all other input fields (text boxes, date selection, dropdowns */ 
 .txt{
     background-color:  white;
