@@ -15,14 +15,20 @@
 
   </head>
 
-  <header>
-    <button class="homeButton" onclick="window.location.href='../../index.html'"><i class="fa fa-home"></i></button>
-  </header>
+  <div class="topbar">
+    <a class="homeButton" href='../../index.html'><i class="fa fa-home"></i></a>
+    <a href="../expenses/expenses.html">Expenses</a>
+    <a href="../delivery/delivery.html">Deliveries</a>
+    <a href="../consulting/consulting.html">Consulting</a>
+    <a href="../invoice/invoice.html">Invoices</a>
+    <a href="../purchaseOrder/purchaseOrder.html">Purchase Order</a>
+  </div>
 
   <body>
 
     <div class="title">
       <h1>Invoices</h1>
+
     </div>
 
     <div class="group">
@@ -30,11 +36,11 @@
 
         <label>Customer</label>
         <select id="select" class="txt">
-          <option value="">op1</option>
-          <option value="">op2</option>
-          <option value="">op3</option>
-          <option value="">op4</option>
-          <option value="">op5</option>
+          <option value="op1">op1</option>
+          <option value="op2">op2</option>
+          <option value="op3">op3</option>
+          <option value="op4">op4</option>
+          <option value="op5">op5</option>
         </select>
 
         <label>Description</label>
@@ -57,6 +63,9 @@
     <br>
     <br>
     <input type="button" class = "addCust" value="Add Customer"  onclick="window.location.href='../addcust/addcust.html'">
+    <br><br>
+    <img src="../../Assests/logo-original-200.jpeg" id = "logo" alt="My Image" class="img" style="float: center;">
+
   </body>
 </html>
 
