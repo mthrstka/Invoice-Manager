@@ -63,7 +63,8 @@
     <br>
     <input type="submit" class="submit" value="Submit" id="submit-button">
     <input type="submit" class = "submit" value="Generate CSV" id="csv-button" onclick="generateCSV()">
-
+    <br>
+    <br>
     <table id="expenses" class="display" style="width:100%">
             <thead>
                 <th>PLACE</th>

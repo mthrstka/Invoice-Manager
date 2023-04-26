@@ -43,7 +43,8 @@
     <br>
     <br>
     <input type="submit" class = "submit" value="Submit" id="submit-button">
-        
+    <br>
+    <br>
     <table id="delivery" class="display" style="width:100%">
             <thead>
                 <th>DID</th>

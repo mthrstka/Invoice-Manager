@@ -59,8 +59,13 @@
     <br>
     <br>
     <input type="submit" class = "submit" value="Generate Invoice" id="submit-button" onclick="generatePDF()">
-    
-    <table id="consult" class="display" style="width:100%">
+    <br>
+    <br>
+    <input type="button" class = "addCust" value="Add Customer"  onclick="window.location.href='../addcust/addcust.html'">
+    <br>
+    <br>
+    <table id="invoice" class="display" style="width:100%">
+
       <thead>
           <th>IID</th>
           <th>CUSTOMER</th>
@@ -91,13 +96,9 @@
 
   <script>
       $(document).ready(function () {
-          $('#consult').DataTable();
+          $('#invoice').DataTable();
       });
   </script>
-
-    <br>
-    <br>
-    <input type="button" class = "addCust" value="Add Customer"  onclick="window.location.href='../addcust/addcust.html'">
     <br><br>
     <img src="../../Assests/logo-original-200.jpeg" id = "logo" alt="My Image" class="img" style="float: center;">
 

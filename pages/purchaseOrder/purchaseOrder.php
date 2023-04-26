@@ -56,7 +56,8 @@
     <!-- Pre-deployment: Display an output of the inputs submitted below the form -->
     <!-- For deployment: Display the ouput of the inputs submitted to the console or a log file, only display to user if there is an exception sending it to the DB. -->
     <div id="output"></div>
-
+    <br>
+    <br>
     <table id="consult" class="display" style="width:100%">
             <thead>
                 <th>PID</th>
