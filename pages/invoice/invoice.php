@@ -16,12 +16,12 @@
   </head>
 
   <div class="topbar">
-    <a class="homeButton" href='../../index.html'><i class="fa fa-home"></i></a>
-    <a href="../expenses/expenses.html">Expenses</a>
-    <a href="../delivery/delivery.html">Deliveries</a>
-    <a href="../consulting/consulting.html">Consulting</a>
-    <a href="../invoice/invoice.html">Invoices</a>
-    <a href="../purchaseOrder/purchaseOrder.html">Purchase Order</a>
+        <a class="homeButton" href='../../index.html'><i class="fa fa-home"></i></a>
+        <a href="../expenses/expenses.php">Expenses</a>
+        <a href="../delivery/delivery.php">Deliveries</a>
+        <a href="../consulting/consulting.php">Consulting</a>
+        <a href="../invoice/invoice.php">Invoices</a>
+        <a href="../purchaseOrder/purchaseOrder.php">Purchase Order</a>
   </div>
 
   <body>
@@ -60,6 +60,41 @@
     <br>
     <input type="submit" class = "submit" value="Generate Invoice" id="submit-button" onclick="generatePDF()">
     
+    <table id="consult" class="display" style="width:100%">
+      <thead>
+          <th>IID</th>
+          <th>CUSTOMER</th>
+          <th>DESCRIPTION</th>
+          <th>QUANTITY</th>
+          <th>PRICE</th>
+          <th>CMESSAGE</th>
+      </thead>
+      <tbody>
+          <?php
+                  $connection = new mysqli("localhost", "ubuntu", "", "PureProduction");
+
+                  $result = $connection->query("SELECT * FROM Invoices");
+
+                  while($row = $result->fetch_assoc()){
+                          echo    "<tr>
+                                          <td>" . $row['IID'] . "</td>
+                                          <td>" . $row['CUSTOMER'] . "</td>
+                                          <td>" . $row['DESCRIPTION'] . "</td>
+                                          <td>" . $row['QUANTITY'] . "</td>
+                                          <td>" . $row['PRICE'] . "</td>
+                                          <td>" . $row['CMESSAGE'] . "</td>
+                                  </tr>";
+                  }
+          ?>
+      </tbody>
+  </table>
+
+  <script>
+      $(document).ready(function () {
+          $('#consult').DataTable();
+      });
+  </script>
+
     <br>
     <br>
     <input type="button" class = "addCust" value="Add Customer"  onclick="window.location.href='../addcust/addcust.html'">

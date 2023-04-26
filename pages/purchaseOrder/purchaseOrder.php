@@ -13,12 +13,12 @@
   </head>
 
   <div class="topbar">
-    <a class="homeButton" href='../../index.html'><i class="fa fa-home"></i></a>
-    <a href="../expenses/expenses.html">Expenses</a>
-    <a href="../delivery/delivery.html">Deliveries</a>
-    <a href="../consulting/consulting.html">Consulting</a>
-    <a href="../invoice/invoice.html">Invoices</a>
-    <a href="../purchaseOrder/purchaseOrder.html">Purchase Order</a>
+        <a class="homeButton" href='../../index.html'><i class="fa fa-home"></i></a>
+        <a href="../expenses/expenses.php">Expenses</a>
+        <a href="../delivery/delivery.php">Deliveries</a>
+        <a href="../consulting/consulting.php">Consulting</a>
+        <a href="../invoice/invoice.php">Invoices</a>
+        <a href="../purchaseOrder/purchaseOrder.php">Purchase Order</a>
   </div>
 
   <body>
@@ -56,6 +56,38 @@
     <!-- Pre-deployment: Display an output of the inputs submitted below the form -->
     <!-- For deployment: Display the ouput of the inputs submitted to the console or a log file, only display to user if there is an exception sending it to the DB. -->
     <div id="output"></div>
+
+    <table id="consult" class="display" style="width:100%">
+            <thead>
+                <th>PID</th>
+                <th>PODATE</th>
+                <th>MILL</th>
+                <th>RATES</th>
+            </thead>
+            <tbody>
+                <?php
+                        $connection = new mysqli("localhost", "ubuntu", "", "PureProduction");
+
+                        $result = $connection->query("SELECT * FROM PurchaseOrders");
+
+                        while($row = $result->fetch_assoc()){
+                                echo    "<tr>
+                                                <td>" . $row['PID'] . "</td>
+                                                <td>" . $row['PODATE'] . "</td>
+                                                <td>" . $row['MILL'] . "</td>
+                                                <td>" . $row['RATES'] . "</td>
+                                        </tr>";
+                        }
+                ?>
+            </tbody>
+        </table>
+
+        <script>
+            $(document).ready(function () {
+                $('#consult').DataTable();
+            });
+        </script>
+
   </body>
 </html>
 
