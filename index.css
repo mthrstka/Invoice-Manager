@@ -69,6 +69,8 @@ h6{
     overflow: hidden;
     background-color: #60519c;
     border-radius: 10px;
+    border-style: solid;
+    border-color: #565556;
   }
   
 .topbar a {

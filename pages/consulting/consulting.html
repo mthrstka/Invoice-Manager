@@ -17,8 +17,6 @@
         </script>
     </head>
 
-    <script type="module" src="consulting.js"></script>
-
     <div class="topbar">
         <a class="homeButton" href='../../index.html'><i class="fa fa-home"></i></a>
         <a href="../expenses/expenses.html">Expenses</a>
@@ -33,7 +31,15 @@
             <h1>Consulting</h1>
         </div>
 
-        <table id="consult" class="display" style="width:100%">
+        <p id="datatable"></p>
+        <script type="module" src="./consulting.js">;
+        </script>
+        <p id="demo"></p>
+        <script>
+        document.getElementById("demo").innerHTML = 5 + 6;
+        </script>
+
+        <!-- <table id="consult" class="display" style="width:1<00%">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -512,6 +518,6 @@
                     <th>Salary</th>
                 </tr>
             </tfoot>
-        </table>
+        </table> -->
     </body>
 </html>
